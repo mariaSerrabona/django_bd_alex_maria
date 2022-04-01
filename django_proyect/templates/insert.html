@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<head>
+    <title>STUDENT FORMULARY</title>
+</head>
+<body>
+    <center>
+        <h1> inserting new student</h1>
+        <hr/>
+        <from method='POST'>
+            {% csrf_token %}
+        <table border="'1">
+
+            <tr>
+                <td> Nombre del alumno </td>
+                <td> <input type="text" placeholder=" Introduce el nombre del alumno:" name ='nombre' ></td>
+            </tr>
+            <tr>
+                <td> Apellidos </td>
+                <td> <input type="text" placeholder=" Introduce los apellidos del alumno:" name ='apellidos' ></td>
+            </tr>
+            <tr>
+                <td> Dirección </td>
+                <td> <input type="text" placeholder=" Introduce la dirección del alumno:" name ='direccion' ></td>
+            </tr>
+            <tr>
+                <td>Ciudad </td>
+                <td> <input type="text" placeholder=" Introduce la ciudad:" name ='ciudad' ></td>
+            </tr>
+            <tr>
+                <td> Provincia </td>
+                <td> <select name='provincia'>
+                    <option selected disables=true>-- Select Occupation -- </option>
+                    <option> La Coruña </option>
+                    <option> Pontevedra </option>
+                    <option> Ourense </option>
+                    <option> Lugo </option>
+                    <option> Asturias </option>
+                    <option> Cantabria </option>
+                    <option> vizcaya </option>
+                    <option> Guipúzcoa </option>
+                    <option> Álava </option>
+                    <option> Navarra </option>
+                    <option> Huesca </option>
+                    <option> Zaragoza </option>
+                    <option> Teruel  </option>
+                    <option> Lérida </option>
+                    <option> Tarragona </option>
+                    <option> Barcelona </option>
+                    <option> Gerona </option>
+                    <option> León </option>
+                    <option> Zamora </option>
+                    <option> Palencia </option>
+                    <option> Valladolid </option>
+                    <option> Burgos </option>
+                    <option> Soria </option>
+                    <option> Segovia </option>
+                    <option> Ávila </option>
+                    <option> Salamanca </option>
+                    <option> Madrid </option>
+                    <option> Guadalajara </option>
+                    <option> Cuenca </option>
+                    <option> Toledo </option>
+                    <option> Ciudad Real </option>
+                    <option> Albacete </option>
+                    <option> Castellón </option>
+                    <option> Valencia </option>
+                    <option> Alicante </option>
+                    <option> Murcia </option>
+                    <option> Cáceres </option>
+                    <option> Badajoz </option>
+                    <option> Huelva </option>
+                    <option> Sevilla </option>
+                    <option> Córdoba </option>
+                    <option> Jaén </option>
+                    <option> Granada </option>
+                    <option> Almería </option>
+                    <option> Cádiz </option>
+                    <option> Málaga </option>
+                    <option> Ceuta </option>
+                    <option> Melilla </option>
+                    <option> Mallorca </option>
+                    <option> Menorca </option>
+                    <option> Ibiza </option>
+                    <option> Formentera </option>
+                    <option> Palma </option>
+                    <option> Lanzarote </option>
+                    <option> Tenerife </option>
+                    <option> Fuerteventura </option>
+                    <option> Las Palmas </option>
+                    <option> Gomera </option>
+                    <option> Hierro </option>
+                </td>
+            </tr>
+            <tr>
+                <td> Comunidad Autónoma </td>
+                <td> <select name='com_aut'>
+                    <option selected disables=true>-- Select Occupation -- </option>
+                    <option> Andalucia </option>
+                    <option> Aragón </option>
+                    <option> Islas BAleares </option>
+                    <option> Islas Canarias</option>
+                    <option> Cantabría </option>
+                    <option> Castilla La Mancha </option>
+                    <option> Clastilla y León </option>
+                    <option> Cataluña </option>
+                    <option> Madrid </option>
+                    <option> Navarra </option>
+                    <option> Valencia </option>
+                    <option> Extremadura </option>
+                    <option> País Vasco </option>
+                    <option> Asturias </option>
+                    <option> Murcia </option>
+                    <option> La Rioja </option>
+
+                </td>
+            </tr>
+
+            <tr>
+                <td> DNI </td>
+                <td> <input type="text" placeholder=" Introduce el DNI" name ='dni' ></td>
+            </tr>
+            <tr>
+                <td>Asignatura </td>
+                <td> <input type="text" placeholder=" Introduce la asignatura del alumno:" name ='asignatura' ></td>
+            </tr>
+            <tr>
+                <td>Código de la asignatura  </td>
+                <td> <input type="text" placeholder=" Introduce  el código de la asignatura:" name ='codigo_asig' ></td>
+            </tr>
+            <tr>
+                <td>Nota </td>
+                <td> <input type="text" placeholder="Introduce la nota:" name ='nota' ></td>
+            </tr>
+            <tr>
+                <td><input type='submit' value ='insert'/>
+                    <td> {% if messages %}
+                        {% for mess in messages %}
+                        <b style ='color: green;'>{{mess}}</b>
+                        {% endfor %}
+                        {% endif %}
+                    </td>
+                </td>
+            </tr>
+        </table>
+
+    </from>
+    </center>
+</body>
+</html>
