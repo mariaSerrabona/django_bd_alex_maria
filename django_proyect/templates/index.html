@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<head>
+    <title>STUDENT FORMULARY</title>
+</head>
+<body>
+    <center>
+        <h1> creating a formulary with postgresql and django</h1>
+        <hr/>
+        <a href="{% url 'insert_person' %}"> Create new student</a>
+        <table border="'1">
+            <tr>
+                <th>Employee Id </th>
+                <th> Nombre del alumno </th>
+                <th> Apellidos </th>
+                <th> Dirección </th>
+                <th> Ciudad </th>
+                <th> Provincia </th>
+                <th> Comunidad Autónoma </th>
+                <th> DNI </th>
+                <th>Asignatura </th>
+                <th>Código de la asignatura </th>
+                <th>Nota </th>
+            </tr>
+            {%for result in data%}
+            <tr>
+                <td>{{result.id}}</td>
+                <td>{{result.nombre}}</td>
+                <td>{{result.apellidos}}</td>
+                <td>{{result.ciudad}}</td>
+                <td>{{result.provincia}}</td>
+                <td>{{result.com_aut}}</td>
+                <td>{{result.dni}}</td>
+                <td>{{result.asignatura}}</td>
+                <td>{{result.codigo_asig}}</td>
+                <td>{{result.nota}}</td>
+
+            </tr>
+            {% endfor %}
+        </table>
+    </center>
+</body>
